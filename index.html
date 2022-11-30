@@ -23,43 +23,30 @@
     </style>
 </head>
 <body>
-    <table align="center" border="2pt">
-        <tr>
-            <td colspan="4">
-                <label for="first"></label>
-                <input type="text" id="first" />
-            </td> 
-        </tr>
-        <tr>
-            <td><button type="button" id="ButOne" onclick="TypeNumber(id);">1</button></td>
-            <td><button type="button">2</button></td>
-            <td><button type="button">3</button></td>
-            <td><button type="button">+</button></td>
-        </tr>
-        <tr>
-            <td><button type="button">4</button></td>
-            <td><button type="button">5</button></td>
-            <td><button type="button">6</button></td>
-            <td><button type="button">-</button></td>
-        </tr>
-        <tr>
-            <td><button type="button">7</button></td>
-            <td><button type="button">8</button></td>
-            <td><button type="button">9</button></td>
-            <td><button type="button">*</button></td>
-        </tr>
-        <tr>
-            <td><button type="button">C</button></td>
-            <td><button type="button">0</button></td>
-            <td><button type="button">/</button></td>
-            <td><button type="button">=</button></td>
-        </tr>
-    </table>
+    <table align="center" border="2pt" id="table" />
 
     <script lang="js">
-        function TypeNumber(id){
-            document.getElementById('first').value += document.getElementById(id).value;
+        window.onload = () =>{
+            const arr = [[1, 2, 3, '+'], [4, 5, 6, '-'], [7, 8, 9,'*'], ['C', 0, '/', '=']];
+            let htmlContent = '<tr><td colspan="4"><label for="first"></label><input type="text" id="first" /></td></tr>';
+            
+            for (let i = 0; i < arr.length; i++) {
+                const str = arr[i];
+                let tr = ``;
+
+                for (let j = 0; j < str.length; j++)
+                    tr += `<td><button type="button" onclick="TypeNumber('${str[j]}')">${str[j]}</button></td>`;
+                
+                htmlContent += `<tr>${tr}</tr>`;
+            }
+
+            document.getElementById('table').innerHTML = htmlContent;
         }
+
+        function TypeNumber(val){
+            console.log(val);
+        }
+
     </script>
 
     <!-- <label for="first">1 число</label>
