@@ -1,19 +1,58 @@
 button {
-	width: 100%;
+	width: 50px;
 	height: 50px;
+	border: none;
+	background: #FFFFFF;
+	border-radius: 10px;
+	font-size: 18pt;
 }
 
-tr {
+button:hover{
+	filter: brightness(75%);
+	transition: all 0.5s;
+}
+
+input {
+	height: 75px;
+	width: 100%;
+	max-width: fit-content;
+	background-color:  #FDEAA8;
+	border: none;
+	border-radius: 10px;
+	font-size: 18pt;
+}
+
+table {
+	background-color: #000000;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	border-spacing: 5px;
+}
+
+.equalButton{
+	width: 100%;
+	height: 50px;
+	border: 0ch;
+	border-radius: 10px;
+	background: #f0851b;
+}
+
+.equalButton:hover{
+	filter: brightness(75%);
+	transition: all 0.5s;
+}
+
+.ActionButton{
+	background: #f0851b;
+	border: 0ch;
+	border-radius: 10px;
 	width: 50px;
 	height: 50px;
 }
 
-input {
-	height: 50px;
-}
-
-table {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+.ActionButton:hover{
+	filter: brightness(75%);
+	transition: all 0.5s;
 }
