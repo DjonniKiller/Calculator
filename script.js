@@ -44,11 +44,11 @@ function GetInput(val) {
 				else
 					result.value = eval(str);
 				break;
-			case 'C':
+			case "AC":
 				result.value = "";
 				str = "";
 				break;
-			case '<=':
+			case 'C':
 				str = str.slice(0, -1);
 				result.value = result.value.slice(0, -1);
 				break;
